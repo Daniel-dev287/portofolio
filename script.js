@@ -969,3 +969,36 @@ function closeMenu() {
     const navLinks = document.getElementById('navLinks');
     navLinks.classList.remove('active');
 }
+
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Mencegah browser berpindah halaman / 404
+
+        formStatus.className = 'form-status loading';
+        formStatus.textContent = 'Sending message...';
+
+        const formData = new FormData(contactForm);
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(response => {
+            if (response.ok) {
+                formStatus.className = 'form-status success';
+                formStatus.textContent = 'Pesan berhasil terkirim!';
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            formStatus.className = 'form-status error';
+            formStatus.textContent = 'Gagal mengirim pesan. Silakan coba lagi.';
+        });
+    });
+}
