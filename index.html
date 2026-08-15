@@ -119,14 +119,15 @@
                             <a href="#"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
-                    <form name="contact" method="POST" data-netlify="true" action="/" class="contact-form" id="contactForm">
-                        <input type="hidden" name="form-name" value="contact" />
-                        <input type="text" name="name" placeholder="Full Name" required />
-                        <input type="email" name="email" placeholder="Email" required />
-                        <textarea name="message" placeholder="Your message ..." required></textarea>      
-                        <button type="submit" class="btn">Send Message</button>
-                        <div id="formStatus" class="form-status"></div>
-                    </form>
+                <form name="contact" method="POST" data-netlify="true" class="contact-form" id="contactForm">
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <input type="text" name="name" placeholder="Full Name" required />
+                    <input type="email" name="email" placeholder="Email" required />
+                    <textarea name="message" placeholder="Your message ..." required></textarea>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
                 </div>
             </div>
         </section>
@@ -159,6 +160,5 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 </html>
