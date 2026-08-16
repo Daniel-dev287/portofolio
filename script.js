@@ -890,8 +890,8 @@ Value Network (V):
             <li>Export simulation as video with multiple integration methods side-by-side.</li>
         </ul>
     `,
-    github: 'https://github.com/Daniel-dev287/nbody-simulation', // adjust to your actual repo
-    icon: 'fas fa-circle' // or fa-gravity, fa-star
+    github: 'https://github.com/Daniel-dev287/Nbody-problem-simulation', 
+    icon: 'fas fa-circle'
     }
 ];
 
