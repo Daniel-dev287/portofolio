@@ -2,7 +2,7 @@
 const projects = [
     {
     id: 8,
-    title: 'Chara Chatbot – Tsundere Waifu with NLP',
+    title: 'Chara Chatbot – NLP',
     tech: 'Python · Flask · scikit-learn · Sastrawi · HTML/CSS/JS',
     desc: 'Interactive chatbot with a tsundere personality, using intent classification and mood-based responses.',
     fullDesc: `
